@@ -1,0 +1,25 @@
+ToDo:
+ ☐ create interface for setting name when user doesn't exist
+   keep in mind that without creating authentication user is stored under localstorage
+   a user could assume anyoneelses id by simply knowing at setting it in the JS console and reloading
+   this can be fixed by setting a user id by logging in using firebase auth
+ ☐ save id in localstorage and load that user when app starts
+ ☐ create interface to list all games the user belongs to
+ ☐ create interface to list questions by category
+ ☐ design / adjust interface to be able to switch between messaging mode and question mode
+
+Fucntionality:
+ ☐ user can submit message
+ ☐ user can answer question
+ ☐ user can change games
+ ☐ user can change mode between messsage and question
+
+
+Nice to haves:
+ ☐ read, unread, delivered icon
+ ☐ user auth via firebase auth
+ ☐ random point system for questions (1-3)
+   if both parties answer they each get the points
+   if someone skips they loose out on the points
+   first person to 50 points wins
+   allow this to be configured at the time of game creation
