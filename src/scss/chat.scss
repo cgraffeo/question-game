@@ -1,22 +1,26 @@
 @import "../scss/vars";
 
 .option-row{
+  position: fixed;
+  background-color: $primary-background;
+  top: 0;
   width: 100%;
 }
 .options {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: $text-tertiary;
 }
-.mdl-button{
-  // font-size: 30px;
-}
+
 .text-area{
   width: 100%;
   height: 75%;
   overflow-y: auto;
   bottom: 200px;
+  margin-top: 40px;
+  margin-bottom: 100px;
 }
 
 .chat-text {
@@ -52,10 +56,27 @@
 }
 
 .answer-area{
+  display: flex;
+  flex-direction: column;
   position: fixed;
-  bottom: 10px;
+  background-color: $primary-background;
+  bottom: 0;
   width: 100%;
 }
+.answer-line{
+  display: flex;
+}
+
+.chat-area{
+  color: $accent;
+  text-align: center;
+}
+
+.chat-btn{
+  display: flex;
+  align-self: center;
+}
+
 .mdl-textfield__label{
   color: $accent;
   // font-size: 30px;

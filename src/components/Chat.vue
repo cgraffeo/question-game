@@ -16,11 +16,15 @@
   </div>
   <div class="answer-area row">
     <div class="choose-category">
-      <mdl-button primary icon=""></mdl-button>
+      <mdl-button primary icon="playlist_add"></mdl-button>
+      <!-- <p class="answer-msg-toggle">Answer</p> -->
+      <!-- <p class="current-question">What would you do if you were purple?</p> -->
     </div>
     <div class="answer-line">
-      <mdl-text-field label="Click Here to Type"></mdl-text-field>
-    </div>
+      <mdl-text-field label-class="chat-area" label="Click Here to Type"></mdl-text-field>
+      <div class="chat-btn">
+        <mdl-button primary icon="chat"></mdl-button>
+      </div>
     </div>
   </div>
 </div>

@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="new-game-btn">
-    <mdl-button primary mini-fab icon="add"></mdl-button>
+    <mdl-button primary fab ripple icon="add"></mdl-button>
   </div>
 </div>
 </template>

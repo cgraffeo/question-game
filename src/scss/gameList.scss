@@ -1,0 +1,22 @@
+@import "../scss/vars";
+.game-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-y: auto;
+}
+.game-title{
+  color: $text-tertiary;
+}
+.your-games{
+  color: $text-secondary;
+  justify-content: center;
+}
+.players-in-game{
+  flex-direction: column;
+  height: 100%;
+  color: $text-tertiary;
+}
+.play-btn{
+  padding-bottom: 16px;
+}
