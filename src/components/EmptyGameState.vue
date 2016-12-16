@@ -1,20 +1,30 @@
 <template>
 <div class="container">
-  <div class="title">
-    <h2>ICE BREAKER</h2>
+  <div class="text-container">
+    <div class="title title-top">
+      <h2>ICE BREAKER</h2>
+    </div>
+    <div class="filler-text">
+      <p>Looks like you have no games yet.</p>
+      <p>Click below to start one.</p>
+    </div>
   </div>
-  <div class="filler-text">
-    <p>Looks like you have no games yet.</p>
+  <div class="new-game-btn">
+    <mdl-button primary mini-fab icon="add"></mdl-button>
   </div>
 </div>
 </template>
 
 <script>
+import MdlButton from './mdl/Button.vue'
+
+export default {
+  components: {
+    MdlButton
+  }
+}
 </script>
 
 <style lang="sass">
-.title{
-  color: rgba(255, 255, 255, 0.9);
-}
-.filler-text{}
+  @import "../scss/emptyGameState"
 </style>

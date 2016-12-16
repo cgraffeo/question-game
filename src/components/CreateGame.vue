@@ -1,23 +1,18 @@
 <template>
 <div class="container">
-  <div class="title">
+  <div class="title title-top">
     <h2>ICE BREAKER</h2>
   </div>
-  <div class="enter-user-name">
-    <mdl-text-field label="Game Name"></mdl-text-field>
-  </div>
-  <div class="player-invite">
-    <p>Invite Players</p>
-    <!-- Icon goes here -->
-  </div>
-  <div class="player-list">
-    <p class="players" v-text=""></p>
+  <div class="enter-game-name">
+    <mdl-text-field label-class="centered-label-input"
+      label="Click to Enter Game Name"></mdl-text-field>
   </div>
 </div>
 </template>
 
 <script>
 import MdlTextField from './mdl/TextField.vue'
+
 export default {
   components: {
     MdlTextField
@@ -26,7 +21,5 @@ export default {
 </script>
 
 <style lang="sass">
-.title{
-  color: rgba(255, 255, 255, 0.9);
-}
+@import "../scss/createGame"
 </style>
