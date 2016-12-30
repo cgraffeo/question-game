@@ -1,12 +1,29 @@
 ToDo:
- ☐ create interface for setting name when user doesn't exist
+ ✔ create interface for setting name when user doesn't exist @done (16-12-30 11:04)
    keep in mind that without creating authentication user is stored under localstorage
    a user could assume anyoneelses id by simply knowing at setting it in the JS console and reloading
    this can be fixed by setting a user id by logging in using firebase auth
  ☐ save id in localstorage and load that user when app starts
- ☐ create interface to list all games the user belongs to
- ☐ create interface to list questions by category
+ ✔ create interface to list all games the user belongs to @done (16-12-30 11:04)
+ ✔ create interface to list questions by category @done (16-12-30 11:05)
  ☐ design / adjust interface to be able to switch between messaging mode and question mode
+
+Routes / Game State:
+ ☐ /
+ Use a navigation gaurd to redirect based on if the user has already signed up.
+ http://router.vuejs.org/en/advanced/navigation-guards.html
+
+ If users is authed by firebase the redirect to games list
+ If user doesn't exist go to signup and redirect to game list after they sign up
+
+ ☐ /signup
+ using email and password auth in firebase
+
+ ☐ /games
+ ☐ /games/new
+ ☐ /play/:gameId
+ ☐ /play/:gameId/categories
+ ☐ /play/:gameId/settings
 
 Fucntionality:
  ☐ user can submit message
