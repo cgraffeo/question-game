@@ -6,6 +6,6 @@ export default [
   {gameId: '2bf75cf9-0479-4002-98ba-167ce0840113', owner: 'chris', players: 'Chris', title: 'Super Awesome Game 5'},
   {gameId: '2bf75cf9-0479-4002-98ba-167ce0840113', owner: 'chris', players: 'Chris', title: 'Super Awesome Game 6'},
   {gameId: '2bf75cf9-0479-4002-98ba-167ce0840113', owner: 'chris', players: 'hillary', title: 'Super Awesome Game 7'},
-  {gameId: '2bf75cf9-0479-4002-98ba-167ce0840113', owner: 'chris', players: 'Chris', title: 'Super Awesome Game 8'},
+  {gameId: '291c40cb-045e-404f-b3a0-25e7c0649937', owner: 'chris', players: 'Chris', title: 'Super Awesome Game 8'},
   {gameId: '2bf75cf9-0479-4002-98ba-167ce0840113', owner: 'chris', players: 'Chris', title: 'Super Awesome Game 9'}
 ]

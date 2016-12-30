@@ -19,5 +19,5 @@
 </script>
 
 <style lang="sass">
-@import "../scss/enterUser"
+  @import "../scss/enterUser"
 </style>
