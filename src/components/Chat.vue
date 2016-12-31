@@ -49,10 +49,12 @@ export default {
     MdlTextField,
     MdlButton
   },
-  data: {
-    toggle: false
-    // newMessage: null,
-    // newAnswer: null
+  data () {
+    return {
+      toggle: false
+      // newMessage: null,
+      // newAnswer: null
+    }
   },
   computed: {
     myUserName () {
