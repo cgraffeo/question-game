@@ -25,12 +25,14 @@ export default {
   },
   data () {
     return {
-      activeState: 'Auth'
+      activeState: 'Chat'
     }
   },
   computed: {
     ...mapGetters({
-      user: 'getCurrentUser'
+      user: 'getCurrentUser',
+      msg: 'getMessages',
+      answer: 'getAnswers'
     })
   },
   methods: {

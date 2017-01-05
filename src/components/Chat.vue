@@ -1,8 +1,3 @@
-<!-- let firebase = require('firebase');
-let db = firebase.database(); -->
-<!-- let msg = db.ref('msg'); -->
-<!-- let answer = db.ref('answer'); -->
-
 <template>
 <div class="container">
   <div class="row option-row">
@@ -22,17 +17,17 @@ let db = firebase.database(); -->
   <div class="answer-area row">
     <div class="choose-category">
       <mdl-button primary icon="playlist_add"></mdl-button>
-      <div :class="{active: toggleable}">
-        <mdl-button @click.prevent="toggleMsg" primary msg="Message"></mdl-button>
-      </div>
-      <div :class="{active: toggleable}">
-        <mdl-button @click.prevent="toggleMsg" primary msg="Answer"></mdl-button>
+      <div>
+        <mdl-button v-if="toggle" @click="toggleMsg" primary msg="Message"></mdl-button>
+        <mdl-button v-if="!toggle" @click="toggleMsg" primary msg="Answer"></mdl-button>
       </div>
     </div>
     <div class="answer-line">
-      <mdl-text-field label-class="chat-area" label="Click Here to Type"></mdl-text-field>
+      <mdl-text-field v-if="toggle" v-model="newMsg" label-class="chat-area" label="Click Here to Type"></mdl-text-field>
+      <mdl-text-field v-if="!toggle" v-model="newAnswer" label-class="chat-area" label="Click Here to Type"></mdl-text-field>
       <div class="chat-btn">
-        <mdl-button primary icon="chat"></mdl-button>
+        <mdl-button v-if="toggle" @click="sendMsg" primary icon="chat"></mdl-button>
+        <mdl-button v-if="!toggle" @click="sendAnswer" primary icon="chat"></mdl-button>
       </div>
     </div>
   </div>
@@ -43,6 +38,9 @@ let db = firebase.database(); -->
 import messages from '../data/dummyMsgs'
 import MdlTextField from './mdl/TextField.vue'
 import MdlButton from './mdl/Button.vue'
+import firebase from 'firebase'
+
+let db = firebase.database()
 
 export default {
   components: {
@@ -51,10 +49,13 @@ export default {
   },
   data () {
     return {
-      toggle: false
-      // newMessage: null,
-      // newAnswer: null
+      toggle: true,
+      msg: null,
+      answer: null
     }
+  },
+  firebase: {
+    messages: db.ref('items')
   },
   computed: {
     myUserName () {
@@ -69,23 +70,19 @@ export default {
       return [
         this.myUserName === msg.author ? 'chat-text--outgoing' : null
       ]
-    }
-  },
-  toggleMsg () {
-    this.toggle = !this.toggle
+    },
+    toggleMsg () {
+      this.toggle = !this.toggle
+    },
+    sendMsg () {
+      this.$firebaseRefs.msg.push(this.msg)
+    },
+    sendAnswer () {
+      this.$firebaseRefs.answer.push(this.answer)
+    },
+    skip () {},
+    bothAnswer () {}
   }
-  // sendMsg () {
-  //   msg.push({
-  //     message: this.newMessage
-  //   })
-  // },
-  // sendAnswer () {
-  //   answer.push({
-  //     answer: this.newAnswer
-  //   })
-  // }
-  // skip () {},
-  // bothAnswer () {}
 }
 
 </script>

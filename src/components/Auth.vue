@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-
     <div class="row center-content">
       <div class="col-xs-12">
           <h2 class="title">ICE BREAKER</h2>
@@ -23,7 +22,6 @@
         <a v-if="!register" href="#signup" @click.prevent="activateRegistration">Register for a new account</a>
       </div>
     </div>
-
   </div>
 </template>
 
