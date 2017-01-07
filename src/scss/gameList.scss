@@ -20,3 +20,17 @@
 .play-btn{
   padding-bottom: 16px;
 }
+.new-game-modal{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-self: center;
+  width: 100%;
+  height: 200px;
+  // position: fixed;
+  z-index: 2;
+  background-color: #424242;
+}
+.enter-game-details{
+  display: flex;
+}

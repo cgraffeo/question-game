@@ -10,8 +10,8 @@
   </div>
   <div class="row text-area">
     <div class="chat-text" v-for="msg in messages" :class="isOutgoingMsg(msg)">
-      <h3 class="prev-quest" v-if="msg.questionId" v-text="msg.question"></h3>
-      <p class="prev-resp" v-text="msg.text"></p>
+      <!-- <h3 class="prev-quest" v-if="msg.questionId" v-text="msg.question"></h3> -->
+      <!-- <p class="prev-resp" v-text="msg.text"></p> -->
     </div>
   </div>
   <div class="answer-area row">
@@ -35,12 +35,14 @@
 </template>
 
 <script>
-import messages from '../data/dummyMsgs'
+// import messages from '../data/dummyMsgs'
 import MdlTextField from './mdl/TextField.vue'
 import MdlButton from './mdl/Button.vue'
 import firebase from 'firebase'
+// import { mapGetters } from 'vuex'
 
 let db = firebase.database()
+let message = db.ref('message')
 
 export default {
   components: {
@@ -62,13 +64,13 @@ export default {
       return 'chris'
     },
     messages () {
-      return messages
+      return message
     }
   },
   methods: {
     isOutgoingMsg (msg) {
       return [
-        this.myUserName === msg.author ? 'chat-text--outgoing' : null
+        // this.myUserName === msg.author ? 'chat-text--outgoing' : null
       ]
     },
     toggleMsg () {

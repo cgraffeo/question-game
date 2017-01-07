@@ -1,44 +1,13 @@
 <template>
   <div id="app">
-    <component :is="activeState"></component>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Chat from './components/Chat.vue'
-import Auth from './components/Auth.Vue'
-import EmptyGameState from './components/EmptyGameState.vue'
-import CreateGame from './components/CreateGame.vue'
-import GameList from './components/GameList.vue'
-import CategoryList from './components/CategoryList.vue'
-import { mapGetters } from 'vuex'
-
 export default {
-  name: 'app',
-  components: {
-    Chat,
-    Auth,
-    EmptyGameState,
-    CreateGame,
-    GameList,
-    CategoryList
-  },
-  data () {
-    return {
-      activeState: 'Chat'
-    }
-  },
-  computed: {
-    ...mapGetters({
-      user: 'getCurrentUser',
-      msg: 'getMessages',
-      answer: 'getAnswers'
-    })
-  },
-  methods: {
-  }
+  name: 'app'
 }
-
 </script>
 
 <style lang="sass" src="./scss/style.scss"></style>
