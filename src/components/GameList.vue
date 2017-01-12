@@ -6,7 +6,7 @@
   <div class="games">
     <h5 class="game-title">Games</h5>
     <div class="game-list" v-for="game in myGames">
-      <router-link class="your-games" v-text="game.name" :to="gameRoute(game)"></router-link>
+      <router-link class="your-games" v-text="game.name"  :to="gameRoute(game)"></router-link>
     </div>
   </div>
   <div class="new-game-btn">
